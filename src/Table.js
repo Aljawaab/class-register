@@ -3,9 +3,9 @@ import TableBody from "./TableBody";
 
 function Table(){
     return(
-        <>
+        <table>
           <TableBody />
-        </>
+        </table>
     )
 }
 
