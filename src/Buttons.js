@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Buttons() {  
-    return (  
-      <>  
-        <button>A</button>  
-        <button>P</button>  
-      </>  
-    );  
-  } 
+function Buttons() {
+  const [clickedButton, setClickedButton] = useState(null); 
 
-export default Buttons
+  const handleButtonClick = (label) => {
+    setClickedButton(label);
+  };
+
+  return (
+    <div>
+      <button
+        onClick={() => handleButtonClick("A")}
+        style={{
+          backgroundColor: clickedButton === "A" ? "red" : "white", 
+          color: "black", 
+        }}
+      >
+        A
+      </button>
+      <button
+        onClick={() => handleButtonClick("P")}
+        style={{
+          backgroundColor: clickedButton === "P" ? "red" : "white", 
+          color: "black", 
+        }}
+      >
+        P
+      </button>
+    </div>
+  );
+}
+
+export default Buttons;
+ 
