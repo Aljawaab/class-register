@@ -1,10 +1,10 @@
 import React from "react";
 import TableRow from "./TableRow.js"
 
-function TableBody(){
+function TableBody({students}){
     return(
           <tbody>
-            <TableRow />
+            {students.map(student => <TableRow key={student.id} student={student} />)}
           </tbody>        
     )
 }

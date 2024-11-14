@@ -1,10 +1,10 @@
 import React from "react";
 import Buttons from "./Buttons";
 
-function TableRow(){
+function TableRow({student}){
     return(
         <tr>
-            <td>students.name</td>
+            <td>{student.name}</td>
             <td><Buttons /></td>
             <td><Buttons /></td>
             <td><Buttons /></td>
