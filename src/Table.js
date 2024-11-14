@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import TableBody from "./TableBody";
 import TableHead from "./TableHead.js"
 
-function Table(){
-  
-  const [students, setStudents] = useState([]) 
+function Table({students}){
+
+  /*const [students, setStudents] = useState([]) 
 
   useEffect(() => { 
       
@@ -12,7 +12,9 @@ function Table(){
       .then(response => response.json())   
       .then(students => setStudents(students));    
        
-    }, []);
+    }, []);*/
+
+    
     return(
         <table>
           <TableHead />
