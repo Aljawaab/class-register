@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 function Form({ addStudent }) {
-  const [name, setName] = useState(""); // State for the student name
+  const [name, setName] = useState("");
 
-  // Function to handle form submission
+ 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault(); 
 
-    // Create a new student object with only the name
+    
     const newStudent = { name };
 
-    // Make a POST request to add the new student
+    
     fetch("http://localhost:3000/students", {
       method: "POST",
       headers: {
@@ -20,8 +20,8 @@ function Form({ addStudent }) {
     })
       .then((response) => response.json())
       .then((data) => {
-        addStudent(data); // Update the parent component's state with the new student
-        setName(""); // Clear the form field
+        addStudent(data); 
+        setName(""); 
       })
       .catch((error) => {
         console.error("Error adding student:", error);
@@ -30,6 +30,7 @@ function Form({ addStudent }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <label>STUDENT NAME:</label>
       <input
         type="text"
         value={name}
