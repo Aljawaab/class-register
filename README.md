@@ -29,7 +29,7 @@ This is a React-based web application that keeps track of student attendance. Th
 
 ### View Live Site
 
-Visit the deployed application at: [React Blog App](https://class-register-pfza70ugf-aljawaabs-projects.vercel.app/)
+Visit the deployed application at: [Attendance React App](class-register.vercel.app)
 
 The live site allows you to:
 
