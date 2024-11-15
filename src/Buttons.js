@@ -21,7 +21,7 @@ function Buttons() {
       <button
         onClick={() => handleButtonClick("P")}
         style={{
-          backgroundColor: clickedButton === "P" ? "red" : "white", 
+          backgroundColor: clickedButton === "P" ? "green" : "white", 
           color: "black", 
         }}
       >

@@ -9,7 +9,7 @@ function App() {
   const [filteredStudents, setFilteredStudents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/students")
+    fetch("https://json-server-template-t803.onrender.com")
       .then((response) => response.json())
       .then((data) => {
         setStudents(data)
@@ -26,7 +26,7 @@ function App() {
 
   const handleSearch = (searchTerm) => {
     if (searchTerm.trim() === "") {
-      setFilteredStudents(students); // If search term is empty, show all students
+      setFilteredStudents(students); 
     } else {
       const filtered = students.filter((student) =>
         student.name.toLowerCase().includes(searchTerm.toLowerCase())
