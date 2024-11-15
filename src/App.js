@@ -1,29 +1,52 @@
 import React, { useState, useEffect } from "react";
 import Table from "./Table"
 import Form from "./Form";
+import "./App.css"
+import Search from "./Search";
 
 function App() {
   const [students, setStudents] = useState([]);
+  const [filteredStudents, setFilteredStudents] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/students")
       .then((response) => response.json())
-      .then((data) => setStudents(data))
+      .then((data) => {
+        setStudents(data)
+        setFilteredStudents(data);
+      })
       .catch((error) => console.error("Error fetching students:", error));
   }, []);
 
 
   const addStudent = (newStudent) => {
     setStudents((prevStudents) => [...prevStudents, newStudent]);
+    setFilteredStudents((prevStudents) => [...prevStudents, newStudent]);
+  };
+
+  const handleSearch = (searchTerm) => {
+    if (searchTerm.trim() === "") {
+      setFilteredStudents(students); // If search term is empty, show all students
+    } else {
+      const filtered = students.filter((student) =>
+        student.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredStudents(filtered);
+    }
   };
 
   return (
     <div className="App">
       <h1>ATTENDANCE TRACKER</h1>
-      <Form addStudent={addStudent}/>
-      <Table students={students}/>      
+      <Form addStudent={addStudent} />
+      <Search onSearch={handleSearch} />
+      <Table students={filteredStudents} />      
     </div>
   );
 }
 
 export default App;
+
+
+
+
