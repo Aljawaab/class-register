@@ -9,11 +9,11 @@ function App() {
   const [filteredStudents, setFilteredStudents] = useState([]);
 
   useEffect(() => {
-    fetch("https://json-server-template-t803.onrender.com")
+    fetch("http://localhost:3000/students")
       .then((response) => response.json())
       .then((data) => {
         setStudents(data)
-        setFilteredStudents(data);
+        setFilteredStudents(data)
       })
       .catch((error) => console.error("Error fetching students:", error));
   }, []);
