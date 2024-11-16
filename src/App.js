@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>ATTENDANCE TRACKER</h1>
+      <h1>CLASS ATTENDANCE TRACKER</h1>
       <Form addStudent={addStudent} />
       <Search onSearch={handleSearch} />
       <Table students={filteredStudents} />      
