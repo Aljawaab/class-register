@@ -93,6 +93,12 @@ If you want to run the project locally, you'll need:
 
 ## Support and Contact Details
 
+## Future Enhancements
+- Add more attendance statuses or options.
+- Implement a feature to store attendance history.
+- Improve the user interface with better styling.
+- Add authentication for more secure usage.
+
 If you have any questions, suggestions, or need assistance, please contact:
 
 - Email: <abdul.aljawaab@student.moringaschool.com>
