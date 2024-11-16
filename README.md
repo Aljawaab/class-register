@@ -91,7 +91,6 @@ If you want to run the project locally, you'll need:
 - Repository: [Students API Repository](https://github.com/Aljawaab/json-server-template.git)
 - Deployed API: [Live API URL](https://json-server-template-t803.onrender.com)
 
-## Support and Contact Details
 
 ## Future Enhancements
 - Add more attendance statuses or options.
@@ -99,6 +98,7 @@ If you want to run the project locally, you'll need:
 - Improve the user interface with better styling.
 - Add authentication for more secure usage.
 
+## Support and Contact Details
 If you have any questions, suggestions, or need assistance, please contact:
 
 - Email: <abdul.aljawaab@student.moringaschool.com>
