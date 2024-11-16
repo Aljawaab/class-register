@@ -30,7 +30,7 @@ function Form({ addStudent }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>STUDENT NAME:</label>
+      <label>ENTER NAME HERE:</label>
       <input
         type="text"
         value={name}
