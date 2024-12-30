@@ -11,7 +11,7 @@ function Form({ addStudent }) {
     const newStudent = { name };
 
     
-    fetch("https://json-server-template-t803.onrender.com", {
+    fetch("https://json-server-template-t803.onrender.com/students", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
